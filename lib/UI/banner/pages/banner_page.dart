@@ -15,7 +15,7 @@ class BannerPage extends StatelessWidget {
               : MediaQuery.sizeOf(context).height * 0.08,
         ),
         Image.asset(
-          "memoji-computer.png",
+          "assets/memoji-computer.png",
           height: Responsive.isDesktop(context)
               ? MediaQuery.sizeOf(context).height * 0.12
               : MediaQuery.sizeOf(context).height * 0.1,
