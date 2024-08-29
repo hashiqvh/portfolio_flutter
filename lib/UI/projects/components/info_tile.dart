@@ -9,20 +9,26 @@ class InfoTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
-          Icons.check_circle_outline,
-          color: Colors.white.withOpacity(0.800000011920929),
+        FittedBox(
+          child: Icon(
+            Icons.check_circle_outline,
+            color: Colors.white.withOpacity(0.800000011920929),
+          ),
         ),
         SizedBox(
           width: 10,
         ),
-        Text(
-          'Onboarding increased to 12%.',
-          style: Theme.of(context).textTheme.titleMedium!.merge(TextStyle(
-                color: Colors.white.withOpacity(0.800000011920929),
-                fontFamily: 'Manrope',
-                fontWeight: FontWeight.w400,
-              )),
+        Expanded(
+          child: FittedBox(
+            child: Text(
+              'Onboarding increased to 12%.',
+              style: Theme.of(context).textTheme.titleMedium!.merge(TextStyle(
+                    color: Colors.white.withOpacity(0.800000011920929),
+                    fontFamily: 'Manrope',
+                    fontWeight: FontWeight.w400,
+                  )),
+            ),
+          ),
         ),
       ],
     );
