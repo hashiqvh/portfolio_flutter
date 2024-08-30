@@ -23,25 +23,20 @@ class ProjectItem extends StatelessWidget {
                   left: MediaQuery.sizeOf(context).width * 0.1,
                   right: MediaQuery.sizeOf(context).width * 0.1,
                 )
-              : EdgeInsets.all(0.0),
+              : Responsive.isDesktop(context)
+                  ? EdgeInsets.only(
+                      left: MediaQuery.sizeOf(context).width * 0.2,
+                      right: MediaQuery.sizeOf(context).width * 0.2,
+                    )
+                  : EdgeInsets.all(0.0),
       child: Container(
         height: Responsive.isDesktop(context)
             ? MediaQuery.sizeOf(context).height * 0.5
             : MediaQuery.sizeOf(context).height * 0.7,
-        width: Responsive.isDesktop(context)
-            ? MediaQuery.sizeOf(context).width * 0.6
-            : Responsive.isTablet(context)
-                ? MediaQuery.sizeOf(context).width
-                : MediaQuery.sizeOf(context).width,
         constraints: BoxConstraints(
           maxHeight: Responsive.isDesktop(context)
               ? MediaQuery.sizeOf(context).height * 0.5
               : MediaQuery.sizeOf(context).height * 0.7,
-          maxWidth: Responsive.isDesktop(context)
-              ? MediaQuery.sizeOf(context).width * 0.6
-              : Responsive.isTablet(context)
-                  ? MediaQuery.sizeOf(context).width
-                  : MediaQuery.sizeOf(context).width,
         ),
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/UI/projects/components/project_item.dart';
 import 'package:portfolio/core/responsive/responsive.dart';
 
@@ -12,12 +13,12 @@ class ProjectsPage extends StatelessWidget {
         Text(
           'CURATED WORK',
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: GoogleFonts.manrope(
             color: Color(0xFFC6FCA6),
             fontSize: 14,
-            fontFamily: 'Manrope',
             fontWeight: FontWeight.w600,
             letterSpacing: 5.60,
+            textStyle: Theme.of(context).textTheme.titleMedium!,
           ),
         ),
         SizedBox(
@@ -25,13 +26,15 @@ class ProjectsPage extends StatelessWidget {
         ),
         SizedBox(
           width: MediaQuery.sizeOf(context).width * 0235.70,
-          child: Text('Featured Case Studies',
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headlineMedium!.apply(
-                    color: Colors.white,
-                    fontWeightDelta: 400,
-                    //   fontFamily: 'Inter',
-                  )),
+          child: Text(
+            'Featured Case Studies',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.notoSansOldItalic(
+              color: Colors.white,
+              fontWeight: FontWeight.w400,
+              textStyle: Theme.of(context).textTheme.headlineMedium!,
+            ),
+          ),
         ),
         SizedBox(
           height: Responsive.isDesktop(context)
@@ -40,14 +43,14 @@ class ProjectsPage extends StatelessWidget {
         ),
         SizedBox(
           width: 312,
-          child:
-              Text('Compilation of case studies that evoke my sense of pride',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.titleLarge!.apply(
-                        color: Colors.white,
-
-                        //   fontFamily: 'Inter',
-                      )),
+          child: Text(
+            'Compilation of case studies that evoke my sense of pride',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.manrope(
+              color: Colors.white,
+              textStyle: Theme.of(context).textTheme.titleMedium!,
+            ),
+          ),
         ),
         SizedBox(
           height: Responsive.isDesktop(context)

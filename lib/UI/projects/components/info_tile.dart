@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/core/responsive/responsive.dart';
 
 class InfoTile extends StatelessWidget {
@@ -10,17 +11,10 @@ class InfoTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        !Responsive.isMobile(context)
-            ? Icon(
-                Icons.check_circle_outline,
-                color: Colors.white.withOpacity(0.800000011920929),
-              )
-            : FittedBox(
-                child: Icon(
-                  Icons.check_circle_outline,
-                  color: Colors.white.withOpacity(0.800000011920929),
-                ),
-              ),
+        Icon(
+          Icons.check_circle_outline,
+          color: Colors.white.withOpacity(0.800000011920929),
+        ),
         SizedBox(
           width: 10,
         ),
@@ -28,24 +22,20 @@ class InfoTile extends StatelessWidget {
           child: !Responsive.isMobile(context)
               ? Text(
                   'Onboarding increased to 12%.',
-                  style:
-                      Theme.of(context).textTheme.titleMedium!.merge(TextStyle(
-                            color: Colors.white.withOpacity(0.800000011920929),
-                            fontFamily: 'Manrope',
-                            fontWeight: FontWeight.w400,
-                          )),
+                  style: GoogleFonts.manrope(
+                    color: Colors.white.withOpacity(0.800000011920929),
+                    fontWeight: FontWeight.w400,
+                    textStyle: Theme.of(context).textTheme.titleMedium!,
+                  ),
                 )
               : FittedBox(
                   child: Text(
                     'Onboarding increased to 12%.',
-                    style: Theme.of(context)
-                        .textTheme
-                        .titleMedium!
-                        .merge(TextStyle(
-                          color: Colors.white.withOpacity(0.800000011920929),
-                          fontFamily: 'Manrope',
-                          fontWeight: FontWeight.w400,
-                        )),
+                    style: GoogleFonts.manrope(
+                      color: Colors.white.withOpacity(0.800000011920929),
+                      fontWeight: FontWeight.w400,
+                      textStyle: Theme.of(context).textTheme.titleMedium!,
+                    ),
                   ),
                 ),
         ),
