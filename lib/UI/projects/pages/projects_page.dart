@@ -10,6 +10,9 @@ class ProjectsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(
+          height: MediaQuery.sizeOf(context).height * 0.1,
+        ),
         Text(
           'CURATED WORK',
           textAlign: TextAlign.center,

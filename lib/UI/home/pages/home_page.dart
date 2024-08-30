@@ -9,7 +9,10 @@ import 'package:portfolio/core/responsive/responsive.dart';
 import 'package:portfolio/core/responsive/screen_utli.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+  GlobalKey _homeKey = GlobalKey();
+  GlobalKey _projectsKey = GlobalKey();
+  GlobalKey _aboutKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -48,16 +51,40 @@ class HomePage extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    BannerPage(),
-                    ProjectsPage(),
-                    AboutPage(),
+                    Container(key: _homeKey, child: BannerPage()),
+                    Container(key: _projectsKey, child: ProjectsPage()),
+                    Container(key: _aboutKey, child: AboutPage()),
                     ConnectPage(),
                   ],
                 ),
               ],
             ),
           ),
-          Positioned(top: 0, child: Header()),
+          Positioned(
+              top: 0,
+              child: Header(
+                homeTap: () {
+                  Scrollable.ensureVisible(
+                    _homeKey.currentContext!,
+                    duration: Duration(milliseconds: 500),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                aboutTap: () {
+                  Scrollable.ensureVisible(
+                    _aboutKey.currentContext!,
+                    duration: Duration(milliseconds: 500),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                projectTap: () {
+                  Scrollable.ensureVisible(
+                    _projectsKey.currentContext!,
+                    duration: Duration(milliseconds: 500),
+                    curve: Curves.easeInOut,
+                  );
+                },
+              )),
         ],
       ),
     );

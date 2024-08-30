@@ -3,8 +3,14 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
+  final Function() homeTap;
+  final Function() aboutTap;
+  final Function() projectTap;
   const Header({
     super.key,
+    required this.homeTap,
+    required this.aboutTap,
+    required this.projectTap,
   });
 
   @override
@@ -51,57 +57,84 @@ class Header extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(
-                      child: Center(
-                        child: Text(
-                          'Home',
-                          style: TextStyle(
-                            color: Colors.white.withOpacity(0.800000011920929),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Center(
-                        child: Text(
-                          'Projects',
-                          style: TextStyle(
-                            color: Colors.white.withOpacity(0.800000011920929),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Center(
-                        child: Text(
-                          'About',
-                          style: TextStyle(
-                            color: Colors.white.withOpacity(0.800000011920929),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(3.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Center(
+                    InkWell(
+                      onTap: homeTap,
+                      child: Expanded(
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              'Resume',
+                              'Home',
                               style: TextStyle(
-                                color: Color(0xFF151E28),
+                                color:
+                                    Colors.white.withOpacity(0.800000011920929),
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: projectTap,
+                      child: Expanded(
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'Projects',
+                              style: TextStyle(
+                                color:
+                                    Colors.white.withOpacity(0.800000011920929),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: aboutTap,
+                      child: Expanded(
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'About',
+                              style: TextStyle(
+                                color:
+                                    Colors.white.withOpacity(0.800000011920929),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Resume',
+                                  style: TextStyle(
+                                    color: Color(0xFF151E28),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
