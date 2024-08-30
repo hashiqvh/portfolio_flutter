@@ -25,7 +25,7 @@ class Header extends StatelessWidget {
           child: Stack(
             children: [
               SizedBox(
-                width: 302,
+                width: 320,
                 height: 44,
                 child: ClipRect(
                   child: BackdropFilter(
@@ -40,7 +40,7 @@ class Header extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 302,
+                width: 320,
                 height: 44,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
@@ -55,12 +55,12 @@ class Header extends StatelessWidget {
                   ],
                 ),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    InkWell(
-                      onTap: homeTap,
-                      child: Expanded(
-                        child: Center(
+                    Expanded(
+                      child: Center(
+                        child: InkWell(
+                          onTap: homeTap,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
@@ -76,10 +76,10 @@ class Header extends StatelessWidget {
                         ),
                       ),
                     ),
-                    InkWell(
-                      onTap: projectTap,
-                      child: Expanded(
-                        child: Center(
+                    Expanded(
+                      child: Center(
+                        child: InkWell(
+                          onTap: projectTap,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
@@ -95,10 +95,10 @@ class Header extends StatelessWidget {
                         ),
                       ),
                     ),
-                    InkWell(
-                      onTap: aboutTap,
-                      child: Expanded(
-                        child: Center(
+                    Expanded(
+                      child: Center(
+                        child: InkWell(
+                          onTap: aboutTap,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
@@ -114,9 +114,9 @@ class Header extends StatelessWidget {
                         ),
                       ),
                     ),
-                    InkWell(
-                      onTap: () {},
-                      child: Expanded(
+                    Expanded(
+                      child: InkWell(
+                        onTap: () {},
                         child: Padding(
                           padding: const EdgeInsets.all(3.0),
                           child: Container(
