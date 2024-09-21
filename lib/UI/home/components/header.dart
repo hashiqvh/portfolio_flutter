@@ -45,7 +45,7 @@ class Header extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: Colors.white.withOpacity(0.07999999821186066),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Color(0x19000000),
                       blurRadius: 12,
@@ -124,9 +124,9 @@ class Header extends StatelessWidget {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Resume',
                                   style: TextStyle(

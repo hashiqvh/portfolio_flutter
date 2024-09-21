@@ -17,7 +17,7 @@ class HomeButton extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: isSecondary
           ? ShapeDecoration(
-              color: Color(0xFF051218),
+              color: const Color(0xFF051218),
               shape: RoundedRectangleBorder(
                 side: BorderSide(
                   width: 1,
@@ -25,7 +25,7 @@ class HomeButton extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(12),
               ),
-              shadows: [
+              shadows: const [
                 BoxShadow(
                   color: Color(0x14000000),
                   blurRadius: 24,
@@ -39,7 +39,7 @@ class HomeButton extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              shadows: [
+              shadows: const [
                 BoxShadow(
                   color: Color(0x14000000),
                   blurRadius: 24,

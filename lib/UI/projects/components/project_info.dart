@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/UI/projects/components/info_tile.dart';
-import 'package:portfolio/UI/projects/pages/projects_page.dart';
 
 class ProjectInfo extends StatelessWidget {
   const ProjectInfo({
@@ -18,7 +17,7 @@ class ProjectInfo extends StatelessWidget {
           'AIRBNB',
           textAlign: TextAlign.center,
           style: GoogleFonts.manrope(
-            color: Color(0xFFC6FCA6),
+            color: const Color(0xFFC6FCA6),
             fontWeight: FontWeight.w800,
             letterSpacing: 0.84,
             textStyle: Theme.of(context).textTheme.bodyLarge!,
@@ -46,11 +45,11 @@ class ProjectInfo extends StatelessWidget {
         SizedBox(
           height: MediaQuery.sizeOf(context).height * 0.015,
         ),
-        InfoTile(),
+        const InfoTile(),
         SizedBox(
           height: MediaQuery.sizeOf(context).height * 0.012,
         ),
-        InfoTile(),
+        const InfoTile(),
       ],
     );
   }

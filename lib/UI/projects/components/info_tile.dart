@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/core/responsive/responsive.dart';
 
 class InfoTile extends StatelessWidget {
   const InfoTile({
@@ -15,29 +14,20 @@ class InfoTile extends StatelessWidget {
           Icons.check_circle_outline,
           color: Colors.white.withOpacity(0.800000011920929),
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Expanded(
-          child: !Responsive.isMobile(context)
-              ? Text(
-                  'Onboarding increased to 12%.',
-                  style: GoogleFonts.manrope(
-                    color: Colors.white.withOpacity(0.800000011920929),
-                    fontWeight: FontWeight.w400,
-                    textStyle: Theme.of(context).textTheme.titleMedium!,
-                  ),
-                )
-              : FittedBox(
-                  child: Text(
-                    'Onboarding increased to 12%.',
-                    style: GoogleFonts.manrope(
-                      color: Colors.white.withOpacity(0.800000011920929),
-                      fontWeight: FontWeight.w400,
-                      textStyle: Theme.of(context).textTheme.titleMedium!,
-                    ),
-                  ),
-                ),
+          child: FittedBox(
+            child: Text(
+              'Onboarding increased to 12%.',
+              style: GoogleFonts.manrope(
+                color: Colors.white.withOpacity(0.800000011920929),
+                fontWeight: FontWeight.w400,
+                textStyle: Theme.of(context).textTheme.titleMedium!,
+              ),
+            ),
+          ),
         ),
       ],
     );

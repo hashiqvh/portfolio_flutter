@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/UI/projects/components/project_info.dart';
-import 'package:portfolio/UI/projects/pages/projects_page.dart';
 import 'package:portfolio/core/responsive/responsive.dart';
 
 class ProjectItem extends StatelessWidget {
@@ -28,7 +27,7 @@ class ProjectItem extends StatelessWidget {
                       left: MediaQuery.sizeOf(context).width * 0.2,
                       right: MediaQuery.sizeOf(context).width * 0.2,
                     )
-                  : EdgeInsets.all(0.0),
+                  : const EdgeInsets.all(0.0),
       child: Container(
         height: Responsive.isDesktop(context)
             ? MediaQuery.sizeOf(context).height * 0.5
@@ -40,12 +39,12 @@ class ProjectItem extends StatelessWidget {
         ),
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 1, 15, 23),
+          color: const Color.fromARGB(255, 1, 15, 23),
           border: Border.all(
             color: Colors.white.withOpacity(0.10000000149011612),
           ),
           borderRadius: BorderRadius.circular(18),
-          image: DecorationImage(
+          image: const DecorationImage(
             image:
                 AssetImage('assets/image.png'), // replace with your image path
             fit: BoxFit.cover, // ensures the image covers the container
@@ -61,7 +60,7 @@ class ProjectItem extends StatelessWidget {
                       width: MediaQuery.sizeOf(context).width * 0.27,
                       height: 718.42,
                       decoration: BoxDecoration(
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                               blurRadius: 100,
                               spreadRadius: 100,
@@ -83,7 +82,7 @@ class ProjectItem extends StatelessWidget {
                             width: MediaQuery.sizeOf(context).width * 0.7,
                             height: MediaQuery.sizeOf(context).height * 0.7,
                             clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage("assets/img2.png"),
                                 fit: BoxFit.contain,
@@ -98,7 +97,7 @@ class ProjectItem extends StatelessWidget {
                             width: MediaQuery.sizeOf(context).width * 0.19,
                             height: MediaQuery.sizeOf(context).height * 0.6,
                             clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage("assets/img1.png"),
                                 fit: BoxFit.contain,
@@ -111,7 +110,7 @@ class ProjectItem extends StatelessWidget {
                     top: MediaQuery.sizeOf(context).height * 0.05,
                     child: SizedBox(
                       width: MediaQuery.sizeOf(context).width * 0.2,
-                      child: ProjectInfo(),
+                      child: const ProjectInfo(),
                     ),
                   ),
                   Positioned(
@@ -126,7 +125,7 @@ class ProjectItem extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          shadows: [
+                          shadows: const [
                             BoxShadow(
                               color: Color(0x14000000),
                               blurRadius: 24,
@@ -141,7 +140,7 @@ class ProjectItem extends StatelessWidget {
                             style: Theme.of(context)
                                 .textTheme
                                 .titleMedium!
-                                .merge(TextStyle(
+                                .merge(const TextStyle(
                                   color: Color(0xFF081822),
                                   fontFamily: 'Manrope',
                                   fontWeight: FontWeight.w700,
@@ -161,7 +160,7 @@ class ProjectItem extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        ProjectInfo(),
+                        const ProjectInfo(),
                         SizedBox(
                           height: MediaQuery.sizeOf(context).height * 0.033,
                         ),
@@ -174,7 +173,7 @@ class ProjectItem extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
                             ),
-                            shadows: [
+                            shadows: const [
                               BoxShadow(
                                 color: Color(0x14000000),
                                 blurRadius: 24,
@@ -183,7 +182,7 @@ class ProjectItem extends StatelessWidget {
                               )
                             ],
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               'View Case Study',
                               style: TextStyle(
@@ -205,7 +204,7 @@ class ProjectItem extends StatelessWidget {
                       width: 339,
                       height: 573.05,
                       decoration: BoxDecoration(
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                               blurRadius: 100,
                               spreadRadius: 100,
@@ -227,7 +226,7 @@ class ProjectItem extends StatelessWidget {
                             width: MediaQuery.sizeOf(context).width * 1.2,
                             height: MediaQuery.sizeOf(context).height * 0.8,
                             clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage("assets/img2.png"),
                                 fit: BoxFit.contain,
@@ -245,7 +244,7 @@ class ProjectItem extends StatelessWidget {
                               width: MediaQuery.sizeOf(context).width * 0.55,
                               height: MediaQuery.sizeOf(context).height * 0.7,
                               clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage("assets/img1.png"),
                                   fit: BoxFit.contain,

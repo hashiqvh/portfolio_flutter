@@ -27,34 +27,34 @@ class BannerPage extends StatelessWidget {
             width: 238.96,
             height: 38.28,
             decoration: ShapeDecoration(
-              color: Color(0xCC001402),
+              color: const Color(0xCC001402),
               shape: RoundedRectangleBorder(
-                side: BorderSide(width: 1, color: Color(0xFF061E17)),
+                side: const BorderSide(width: 1, color: Color(0xFF061E17)),
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
             child: Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 22,
                 ),
                 Container(
                   width: 15.31,
                   height: 15.31,
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(169, 68, 194, 81),
+                      color: const Color.fromARGB(169, 68, 194, 81),
                       borderRadius: BorderRadius.circular(15)),
                   child: Center(
                     child: Container(
                       width: 10,
                       height: 10,
                       decoration: BoxDecoration(
-                          color: Color(0xFF44C250),
+                          color: const Color(0xFF44C250),
                           borderRadius: BorderRadius.circular(15)),
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 8,
                 ),
                 Text(
@@ -96,7 +96,7 @@ class BannerPage extends StatelessWidget {
               textStyle: Theme.of(context).textTheme.titleMedium!,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 42,
           ),
           Responsive.isMobile(context) || Responsive.isTablet(context)

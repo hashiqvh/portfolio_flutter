@@ -17,14 +17,14 @@ class ProjectsPage extends StatelessWidget {
           'CURATED WORK',
           textAlign: TextAlign.center,
           style: GoogleFonts.manrope(
-            color: Color(0xFFC6FCA6),
+            color: const Color(0xFFC6FCA6),
             fontSize: 14,
             fontWeight: FontWeight.w600,
             letterSpacing: 5.60,
             textStyle: Theme.of(context).textTheme.titleMedium!,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 28,
         ),
         SizedBox(
@@ -60,24 +60,24 @@ class ProjectsPage extends StatelessWidget {
               ? MediaQuery.sizeOf(context).height * 0.065
               : MediaQuery.sizeOf(context).height * 0.04,
         ),
-        ProjectItem(),
-        SizedBox(
+        const ProjectItem(),
+        const SizedBox(
           height: 80,
         ),
-        ProjectItem(
+        const ProjectItem(
           isWeb: true,
         ),
-        SizedBox(
+        const SizedBox(
           height: 80,
         ),
-        ProjectItem(),
-        SizedBox(
+        const ProjectItem(),
+        const SizedBox(
           height: 80,
         ),
-        ProjectItem(
+        const ProjectItem(
           isWeb: true,
         ),
-        SizedBox(
+        const SizedBox(
           height: 80,
         ),
       ],
