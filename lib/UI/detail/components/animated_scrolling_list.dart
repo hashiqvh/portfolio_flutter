@@ -73,6 +73,11 @@ class _AutoScrollingListViewState extends State<AutoScrollingListView> {
           width: 80,
           height: 80,
           decoration: ShapeDecoration(
+            image: const DecorationImage(
+              image: AssetImage(
+                  'assets/image.png'), // replace with your image path
+              fit: BoxFit.cover, // ensures the image covers the container
+            ),
             color: const Color.fromARGB(255, 1, 15, 23),
             shape: RoundedRectangleBorder(
               side: const BorderSide(width: 1, color: Color(0xFF0D2635)),
