@@ -46,7 +46,7 @@ class ProjectItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(18),
           image: const DecorationImage(
             image:
-                AssetImage('assets/image.png'), // replace with your image path
+                AssetImage('assets/Image.png'), // replace with your image path
             fit: BoxFit.cover, // ensures the image covers the container
           ),
         ),
