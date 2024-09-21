@@ -75,7 +75,7 @@ class _AutoScrollingListViewState extends State<AutoScrollingListView> {
           decoration: ShapeDecoration(
             image: const DecorationImage(
               image: AssetImage(
-                  'assets/image.png'), // replace with your image path
+                  'assets/Image.png'), // replace with your image path
               fit: BoxFit.cover, // ensures the image covers the container
             ),
             color: const Color.fromARGB(255, 1, 15, 23),
