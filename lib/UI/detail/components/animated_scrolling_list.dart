@@ -74,11 +74,6 @@ class _AutoScrollingListViewState extends State<AutoScrollingListView> {
           height: 80,
           decoration: ShapeDecoration(
             color: const Color.fromARGB(255, 1, 15, 23),
-            image: const DecorationImage(
-              image: AssetImage(
-                  'assets/image.png'), // replace with your image path
-              fit: BoxFit.cover, // ensures the image covers the container
-            ),
             shape: RoundedRectangleBorder(
               side: const BorderSide(width: 1, color: Color(0xFF0D2635)),
               borderRadius: BorderRadius.circular(16),
@@ -94,7 +89,7 @@ class _AutoScrollingListViewState extends State<AutoScrollingListView> {
           ),
           child: Padding(
             padding: const EdgeInsets.all(18.0),
-            child: SvgPicture.asset("skills/${imgaes[index]}.svg"),
+            child: SvgPicture.asset("${imgaes[index]}.svg"),
           ),
         ),
       ),

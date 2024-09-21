@@ -19,7 +19,7 @@ class MapBox extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          Image.asset('map.png'),
+          Image.asset('assets/map.png'),
           Positioned(
             left: 0,
             right: 0,
@@ -44,7 +44,7 @@ class MapBox extends StatelessWidget {
                     clipBehavior: Clip.antiAlias,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("user.png"),
+                        image: AssetImage("assets/user.png"),
                         fit: BoxFit.cover,
                       ),
                     ),
