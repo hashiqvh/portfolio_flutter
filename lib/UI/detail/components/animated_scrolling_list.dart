@@ -89,7 +89,7 @@ class _AutoScrollingListViewState extends State<AutoScrollingListView> {
           ),
           child: Padding(
             padding: const EdgeInsets.all(18.0),
-            child: SvgPicture.network("assets/${imgaes[index]}.svg"),
+            child: SvgPicture.asset("assets/${imgaes[index]}.svg"),
           ),
         ),
       ),
