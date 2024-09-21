@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/UI/banner/components/ripple_circle.dart';
 import 'package:portfolio/UI/home/components/home_button.dart';
 import 'package:portfolio/core/responsive/responsive.dart';
 
@@ -36,24 +37,9 @@ class BannerPage extends StatelessWidget {
             child: Row(
               children: [
                 const SizedBox(
-                  width: 22,
+                  width: 16,
                 ),
-                Container(
-                  width: 15.31,
-                  height: 15.31,
-                  decoration: BoxDecoration(
-                      color: const Color.fromARGB(169, 68, 194, 81),
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Center(
-                    child: Container(
-                      width: 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                          color: const Color(0xFF44C250),
-                          borderRadius: BorderRadius.circular(15)),
-                    ),
-                  ),
-                ),
+                const RippleCircle(),
                 const SizedBox(
                   width: 8,
                 ),
@@ -64,6 +50,9 @@ class BannerPage extends StatelessWidget {
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                   ),
+                ),
+                const SizedBox(
+                  width: 16,
                 ),
               ],
             ),
