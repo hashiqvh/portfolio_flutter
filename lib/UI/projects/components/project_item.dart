@@ -45,7 +45,8 @@ class ProjectItem extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(18),
           image: const DecorationImage(
-            image: AssetImage('image.png'), // replace with your image path
+            image:
+                AssetImage('assets/image.png'), // replace with your image path
             fit: BoxFit.cover, // ensures the image covers the container
           ),
         ),
@@ -83,7 +84,7 @@ class ProjectItem extends StatelessWidget {
                             clipBehavior: Clip.antiAlias,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage("img2.png"),
+                                image: AssetImage("assets/img2.png"),
                                 fit: BoxFit.contain,
                               ),
                             ),
@@ -98,7 +99,7 @@ class ProjectItem extends StatelessWidget {
                             clipBehavior: Clip.antiAlias,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage("img1.png"),
+                                image: AssetImage("assets/img1.png"),
                                 fit: BoxFit.contain,
                               ),
                             ),
@@ -227,7 +228,7 @@ class ProjectItem extends StatelessWidget {
                             clipBehavior: Clip.antiAlias,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage("img2.png"),
+                                image: AssetImage("assets/img2.png"),
                                 fit: BoxFit.contain,
                               ),
                             ),
@@ -245,7 +246,7 @@ class ProjectItem extends StatelessWidget {
                               clipBehavior: Clip.antiAlias,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
-                                  image: AssetImage("img1.png"),
+                                  image: AssetImage("assets/img1.png"),
                                   fit: BoxFit.contain,
                                 ),
                               ),
